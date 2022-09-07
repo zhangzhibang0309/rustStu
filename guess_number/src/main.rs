@@ -1,11 +1,10 @@
+use colored::*;
 use rand::Rng;
 use std::{cmp::Ordering, io};
 
 fn main() {
     println!("Hello, world!");
-
     let secret_number: i32 = rand::thread_rng().gen_range(1..=100);
-
     println!("secret: {}", secret_number);
 
     loop {
@@ -24,10 +23,10 @@ fn main() {
         };
 
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("太小"),
-            Ordering::Greater => println!("太大"),
+            Ordering::Less => println!("{}", "太小".red()),
+            Ordering::Greater => println!("{}", "太大".blue()),
             Ordering::Equal => {
-                print!("你猜对了");
+                print!("{}", "你猜对了".green());
                 break;
             }
         }
