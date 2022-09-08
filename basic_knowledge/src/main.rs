@@ -42,7 +42,15 @@ fn main() {
     // let chan = tup.1;
     // println!("{} {} {}", channel, age, chan);
     // array
-    let arr: [i32; 3] = [1, 2, 3];
-    let arr2: [i32; 3] = [1; 3];
-    println!("{} {}", arr[0], arr2[2]);
+    // let arr: [i32; 3] = [1, 2, 3];
+    // let arr2: [i32; 3] = [1; 3];
+    // println!("{} {}", arr[0], arr2[2]);
+
+    // 函数的使用
+    let n: i32 = sum(1, 2);
+    println!("{}", n);
+}
+
+fn sum(x: i32, y: i32) -> i32 {
+    return x + y;
 }
